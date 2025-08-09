@@ -1,7 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Blinker:wght@100;200;300;400;600;700;800;900&family=Manrope:wght@200..800&display=swap');
 @import "tailwindcss";
 
+/* globals.css */
+@layer components {
+  .step-number-class {
+    @apply text-6xl md:text-8xl font-extrabold leading-none inline-block;
+    color: transparent;                        /* hollow interior */
+    -webkit-text-stroke: 2px #ff2b2b;          /* crisp red outline (Chrome/Safari) */
+    /* backup-ish outline for browsers without text-stroke (adds a subtle glow/outset) */
+    text-shadow:
+      0 2px 0 #000000,                 /* dark base to look 'cut out' */
+      0 6px 16px rgba(255,43,43,0.08);         /* soft red glow */
+    position: relative;
+    line-height: 1;
+  }
+
+  /* second, slightly blurred outline layer for that double-outline / glow feel */
+  .step-number-class::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: transparent;
+    -webkit-text-stroke: 7px rgba(255,43,43,0.16);
+    filter: blur(1.2px);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+
+@font-face {
+  font-family: 'Furore';
+  src: url('../assets/font/Furore.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #270606;
   --foreground: #171717;
 }
 
@@ -14,7 +50,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #270606;
     --foreground: #ededed;
   }
 }
@@ -22,5 +58,106 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden ;
+  font-family: "Blinker", sans-serif;
 }
+.blinker-thin {
+  font-family: "Blinker", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.furore {
+  font-family: "Furore", sans-serif;
+}
+
+.sidebar {
+  opacity: 0;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+ background: #e22306;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e22306;
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #dc5806 #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+/* CTA Section Background */
+.bg-cta-section {
+  background: radial-gradient(circle at left top, #400000, #000000);
+  position: relative;
+}
+
+.bg-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/grid-pattern.svg');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Pulse animation */
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.pulse-button {
+  animation: pulse-scale 2s ease-in-out infinite;
+}
+
+/* Back to Top Button Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+.slide-down {
+  animation: slideDown 0.4s ease-in forwards;
+}
+
+
