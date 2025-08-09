@@ -102,7 +102,9 @@ html {
 
 /* CTA Section Background */
 .bg-cta-section {
-  background: radial-gradient(circle at left top, #400000, #000000);
+  background: radial-gradient(circle at left top, #000000, #000000);
+   /* background-image: url('../assets/vector1.png'); */
+   
   position: relative;
 }
 
@@ -110,11 +112,33 @@ html {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/grid-pattern.svg');
-  opacity: 0.05;
+  background: url('../assets/vector1.png');
+  background-repeat: no-repeat;
+  opacity: 1;
   pointer-events: none;
 }
-
+.custom-texture::before  {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/vector2.png');
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  background-size: contain;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.custom-texture1::before  {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/vector3.png');
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  background-size: cover;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
 /* Pulse animation */
 @keyframes pulse-scale {
   0%, 100% {

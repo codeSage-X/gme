@@ -87,7 +87,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-[#ffffff] font-[300] text-sm">Copyright property of GMESTOP2.0</p>
+          <p className="text-[#ffffff] font-[300] text-sm">© {new Date().getFullYear()} Copyright property of GMESTOP2.0</p>
         </div>
       </div>
     </footer>

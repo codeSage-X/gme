@@ -39,7 +39,7 @@ export default function AboutAndBuySection() {
   return (
     <section className="relative py-20 px-4 overflow-hidden">
       {/* Custom Textured Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_top,_#400000,_#000000)] ">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_bottom,_#00000f,_#000000)] custom-texture ">
         {/* Texture overlay */}
         <div className="absolute inset-0 opacity-30">
           <div
@@ -100,7 +100,7 @@ export default function AboutAndBuySection() {
         </div>
 
         {/* HOW TO BUY Section */}
-        <div id="how-to-buy">
+        <div id="how-to-buy " className="py-32">
           <div className="text-center md:text-left mb-16">
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#F60000] via-orange-500 to-red-600 bg-clip-text text-transparent mb-8 furore">
               HOW TO BUY

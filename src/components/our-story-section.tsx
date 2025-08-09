@@ -64,9 +64,11 @@ export default function OurStorySection() {
   ]
 
   return (
-    <section id="our-story" className="relative py-20 px-4 overflow-hidden bg-[radial-gradient(circle_at_left_top,_#400000,_#000000)]">
+    <section id="our-story" className="  relative py-20 px-4 overflow-hidden bg-[radial-gradient(circle_at_right_bottom,_#000000,_#000000)]">
      {/* top gradient */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-red-600/10 to-transparent rounded-full blur-3xl"></div>
+       <div className=" absolute top-0 left-0 right-0 h-60 bg-gradient-to-t from-[#000000] to-transparent"></div>
+         {/* bottom gradient */}
+        <div className=" custom-texture1 absolute bottom-0 left-0 right-0 h-60 bg-gradient-to-t from-[#000000] to-transparent"></div>
       {/* Background */}
       <div className="absolute inset-0 ">
         {/* Texture overlay */}
@@ -93,7 +95,7 @@ export default function OurStorySection() {
         </div>
 
         {/* Story Cards Grid */}
-        <div className="space-y-12">
+        <div className="space-y-12 ">
           {/* Row 1 - The Beginning */}
         <div className="bg-[#1c1a1a] md:p-4 lg:p-8 xl:p-8 2xl:p-8 rounded-2xl">
             <div className="grid md:grid-cols-2 gap-8 lg:px-4 xl:px-4 2xl:px-4 items-stretch">
@@ -159,6 +161,7 @@ export default function OurStorySection() {
               ))}
             </div>
           </div>
+         
          {/* Row 3 - Legacy & GMESTOP 2.0 */}     
             <div className="bg-[#1c1a1a] md:p-4 lg:p-8 xl:p-8 2xl:p-8 rounded-2xl">
     <div className="grid md:grid-cols-2 gap-8 lg:px-4 xl:px-4 2xl:px-4 items-stretch">
