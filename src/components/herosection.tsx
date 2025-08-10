@@ -110,7 +110,7 @@ export default function HeroSection() {
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-lg px-8 py-6"
                 asChild
               >
-                <Link href="#how-to-buy">
+                <Link href="https://www.dextools.io/app/en/solana/pair-explorer/BgUoeCN1faaW9EfoZdzyGeiLndLg5oB2uzm2sLGW5s5Z?t=1754843437201" target="_blank">
                   Buy GMESTOP
                 </Link>
               </Button>
@@ -120,7 +120,7 @@ export default function HeroSection() {
                 className="bg-red-600 border-2 border-[#F60000] hover:bg-red-700 text-white transition-all duration-300 text-lg px-8 py-6"
                 asChild
               >
-                <Link href="#telegram">
+                <Link href="https://t.me/GMESTOP2">
                   Join our Telegram
                 </Link>
               </Button>

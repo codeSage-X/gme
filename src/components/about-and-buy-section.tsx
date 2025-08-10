@@ -59,7 +59,7 @@ export default function AboutAndBuySection() {
 
       <div className="relative z-10 container mx-auto max-w-7xl">
         {/* ABOUT Section */}
-        <div id="about" className="mb-32">
+        <div id="about" className="mb-32 px-4 sm:px-6 md:px-8 lg:px-0">
           <div className="text-center md:text-left mb-16">
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#F60000] via-[#D66400] to-[#F60000] bg-clip-text text-transparent mb-8 furore">
               ABOUT
@@ -100,7 +100,7 @@ export default function AboutAndBuySection() {
         </div>
 
         {/* HOW TO BUY Section */}
-        <div id="how-to-buy " className="py-32">
+        <div id="how-to-buy " className="py-32 px-4 sm:px-6 md:px-8 lg:px-0">
           <div className="text-center md:text-left mb-16">
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#F60000] via-orange-500 to-red-600 bg-clip-text text-transparent mb-8 furore">
               HOW TO BUY

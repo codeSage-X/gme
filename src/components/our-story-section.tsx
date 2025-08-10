@@ -88,7 +88,7 @@ export default function OurStorySection() {
 
       <div className="relative z-10 container mx-auto max-w-7xl">
         {/* Section Title */}
-        <div className="text-center md:text-left mb-16">
+        <div className="text-center md:text-left mb-16 px-4 sm:px-6 md:px-8 lg:px-0">
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#F60000] via-orange-500 to-[#F60000] bg-clip-text text-transparent mb-8 furore">
             OUR STORY SO FAR!
           </h2>

@@ -88,7 +88,7 @@ export default function Navbar() {
   ]
 
   return (
-  <nav className="w-full bg-[radial-gradient(circle_at_center,_#400000,_#000000)] px-4 py-2">
+  <nav className="sticky top-0 z-30 w-full bg-[radial-gradient(circle_at_center,_#400000,_#000000)] px-4 py-2">
       <div className="mx-auto max-w-7xl">
         {/* Mobile Layout */}
         <div className="flex items-center justify-between md:hidden">
